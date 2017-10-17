@@ -302,7 +302,7 @@ while (defined($_ = <>)) {
 				# fall through to $tidy_java
 			}
 
-			if ($tidy_java and $pname eq "java") {
+			if ($tidy_java and $pname =~ m/java(-.+)?/) {
 				# along with $tidy_generic, converts the following:
 				#	Lorg/mozilla/javascript/ContextFactory;.call(Lorg/mozilla/javascript/ContextAction;)Ljava/lang/Object;
 				#	Lorg/mozilla/javascript/ContextFactory;.call(Lorg/mozilla/javascript/C
